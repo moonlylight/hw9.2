@@ -88,9 +88,17 @@ def process_input_files(input_files, output_file):
                 numbers = line.strip().split()
                 for number in numbers:
                     if '/' in number:
-                        rational_list.append(Rational(number))
+                        try:
+                            rational_list.append(Rational(number))
+                        except ValueError:
+                            print(f"Invalid fraction: {number}")
+                            continue
                     else:
-                        rational_list.append(Rational(int(number), 1))
+                        try:
+                            rational_list.append(Rational(int(number), 1))
+                        except ValueError:
+                            print(f"Invalid number: {number}")
+                            continue
     with open(output_file, 'w') as outfile:
         outfile.write(f"{rational_list.sum()()}\n")
 
