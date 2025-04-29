@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 from math import gcd
 
 class Rational:
@@ -100,4 +97,3 @@ def process_input_files(input_files, output_file):
 input_files = ["input01.txt", "input02.txt", "input03.txt"]
 output_file = "output.txt"
 process_input_files(input_files, output_file)
->>>>>>> 5816856 (Додано всі необхадні данні)
